@@ -33,7 +33,7 @@ const ListLinks = () => {
     };
 
     const handleCopySlug = (slug) => {
-        const fullUrl = `${window.location.origin}/${slug}`;
+        const fullUrl = `${window.location.origin}/api/${slug}`;
         navigator.clipboard.writeText(fullUrl).then(() => {
             setCopiedSlug(slug);
             setTimeout(() => setCopiedSlug(null), 2000);
