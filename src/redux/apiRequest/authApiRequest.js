@@ -6,7 +6,7 @@ export const loginCall = async (User, dispatch, Navigate) => {
     console.log(User);
     dispatch(loginStart());
     try {
-        const res = await axios.post("/a/login", User);
+        const res = await axios.post("/api/a/login", User);
         dispatch(loginSuccess(res.data));
         Navigate("/")
     } catch (error) {
@@ -16,7 +16,7 @@ export const loginCall = async (User, dispatch, Navigate) => {
 export const registerCall = async (User, dispatch, Navigate) => {
     dispatch(registerStart());
     try {
-        const res = await axios.post('/a/register', User, {
+        const res = await axios.post('/api/a/register', User, {
             headers: {
                 'Content-Type': 'application/json'
             }

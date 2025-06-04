@@ -14,7 +14,7 @@ export const createLink = async (dispatch, formData, token) => {
             formData: Object.fromEntries(formData)
         });
 
-        const res = await axios.post('/', formData, {
+        const res = await axios.post('/api', formData, {
             headers: {
                 'token': `Bearer ${token}`,
                 'Content-Type': 'multipart/form-data'
@@ -41,7 +41,7 @@ export const getSlugByUserId = async (dispatch, token) => {
     dispatch(getSlugByuserIdStart())
     try {
         console.log("Sending request with token:", token);
-        const res = await axios.get('/user-slugs', {
+        const res = await axios.get('/api/user-slugs', {
             headers: {
                 'token': `Bearer ${token}`
             }

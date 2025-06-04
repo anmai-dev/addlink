@@ -5,7 +5,7 @@ import { getAllUserStart, getAllUserSuccess, getAllUserFailure, getAllUserPendin
 export const getAllUser = async (dispatch) => {
     dispatch(getAllUserStart());
     try {
-        const response = await axios.get('/u/')
+        const response = await axios.get('/api/u/')
         dispatch(getAllUserSuccess(response.data))
     } catch (error) {
         console.log(error);
@@ -15,7 +15,7 @@ export const getAllUser = async (dispatch) => {
 export const getAllUserPd = async (dispatch) => {
     dispatch(getAllUserPendingstart());
     try {
-        const res = await axios.get('/u/pd')
+        const res = await axios.get('/api/u/pd')
         dispatch(getAllUserPendingSuccess(res.data))
     } catch (error) {
         console.log(error)
