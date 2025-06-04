@@ -1,0 +1,117 @@
+footer {
+    background: #0d47a1;
+    /* Màu xanh đậm giữ nguyên, hiện đại */
+    color: #ffffff;
+    padding: 2rem 0;
+    /* Dùng rem cho linh hoạt, tăng padding cho thoáng */
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    /* Ngăn padding làm tràn layout */
+    font-family: 'Arial', sans-serif;
+    /* Font chữ sạch, chuyên nghiệp */
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        /* Padding linh hoạt, thoáng hơn */
+
+        p {
+            margin: 0;
+            font-size: 1rem;
+            /* 16px, linh hoạt với rem */
+            line-height: 1.5;
+            /* Tăng khoảng cách dòng cho dễ đọc */
+            opacity: 0.9;
+            /* Hơi mờ cho tinh tế */
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+            /* Khoảng cách đồng đều, linh hoạt */
+
+            a {
+                color: #ffffff;
+                margin: 0 0.75rem;
+                /* Khoảng cách cân đối */
+                text-decoration: none;
+                font-size: 0.95rem;
+                /* Hơi lớn hơn, dễ đọc */
+                font-weight: 500;
+                /* Độ đậm vừa phải */
+                transition: color 0.3s ease, transform 0.3s ease;
+                /* Thêm hiệu ứng transform */
+
+                &:hover {
+                    color: #bbdefb;
+                    /* Màu sáng khi hover, giữ nguyên */
+                    transform: translateY(-2px);
+                    /* Nâng nhẹ khi hover, hiện đại */
+                }
+            }
+        }
+    }
+}
+
+/* Responsive cho màn hình trung bình và nhỏ */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 1.5rem 0;
+        /* Giảm padding cho màn hình nhỏ */
+
+        .footer-content {
+            padding: 0 1rem;
+
+            p {
+                font-size: 0.9rem;
+                /* Giảm nhẹ kích thước chữ */
+                line-height: 1.4;
+            }
+
+            .footer-links {
+                margin-top: 0.75rem;
+                display: flex;
+                flex-wrap: wrap;
+                /* Cho phép liên kết xuống dòng nếu cần */
+                justify-content: center;
+                /* Căn giữa cho đẹp */
+
+                a {
+                    margin: 0 0.5rem 0.5rem;
+                    /* Thêm khoảng cách dọc khi xuống dòng */
+                    font-size: 0.85rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    footer {
+        padding: 1rem 0;
+        /* Padding nhỏ hơn cho điện thoại */
+
+        .footer-content {
+            padding: 0 0.75rem;
+
+            p {
+                font-size: 0.85rem;
+                /* Chữ nhỏ hơn, vừa vặn */
+                line-height: 1.3;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                /* Xếp dọc trên màn rất nhỏ */
+                align-items: center;
+
+                a {
+                    margin: 0.5rem 0;
+                    /* Khoảng cách dọc đồng đều */
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}

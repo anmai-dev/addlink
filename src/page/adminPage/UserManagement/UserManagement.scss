@@ -1,0 +1,73 @@
+.user-management {
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .user-table {
+        width: 100%;
+        border-collapse: collapse;
+        /* Loại bỏ khoảng cách giữa các ô */
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+
+        /* Định dạng tiêu đề bảng */
+        thead {
+            background-color: #f8f9fa;
+            /* Màu nền giống Bootstrap */
+            color: #333;
+
+            th {
+                padding: 12px 15px;
+                text-align: left;
+                font-weight: 600;
+                border-bottom: 2px solid #dee2e6;
+                /* Viền dưới giống Bootstrap */
+            }
+        }
+
+        /* Định dạng nội dung bảng */
+        tbody {
+            tr {
+                border-bottom: 1px solid #dee2e6;
+
+                &:hover {
+                    background-color: #f1f1f1;
+                    /* Hiệu ứng hover */
+                }
+
+                th,
+                td {
+                    padding: 12px 15px;
+                    text-align: left;
+                }
+
+                th {
+                    font-weight: 600;
+                    color: #555;
+                }
+
+                td {
+                    color: #333;
+                }
+            }
+        }
+    }
+
+    /* Responsive: Cuộn ngang trên màn hình nhỏ */
+    @media (max-width: 768px) {
+        .user-table {
+            display: block;
+            overflow-x: auto;
+            /* Cho phép cuộn ngang */
+            white-space: nowrap;
+            /* Ngăn xuống dòng */
+        }
+    }
+}

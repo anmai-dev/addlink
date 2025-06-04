@@ -1,0 +1,189 @@
+.list-links-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .list-links-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin: 0;
+        }
+
+        .create-link-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #45a049;
+            }
+
+            i {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .links-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .link-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .link-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        .link-info {
+            padding: 15px;
+
+            h3 {
+                margin: 0 0 10px 0;
+                font-size: 18px;
+                color: #333;
+            }
+
+            p {
+                color: #666;
+                font-size: 14px;
+                margin-bottom: 15px;
+                line-height: 1.4;
+            }
+
+            .link-details {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 15px;
+
+                .link-meta {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    .slug-container {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        background: #f5f5f5;
+                        padding: 4px 8px;
+                        border-radius: 4px;
+                        transition: background-color 0.3s;
+
+                        &:hover {
+                            background: #e9e9e9;
+                        }
+
+                        .slug {
+                            color: #2196F3;
+                            font-weight: 500;
+                            font-family: monospace;
+                        }
+
+                        .copy-button {
+                            background: none;
+                            border: none;
+                            padding: 4px;
+                            cursor: pointer;
+                            color: #666;
+                            transition: color 0.3s;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            &:hover {
+                                color: #2196F3;
+                            }
+
+                            i {
+                                font-size: 14px;
+                            }
+
+                            &.copied {
+                                color: #4CAF50;
+                            }
+                        }
+                    }
+
+                    .date {
+                        color: #888;
+                        font-size: 12px;
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+
+                        i {
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                .link-actions {
+                    display: flex;
+                    gap: 10px;
+
+                    .destination,
+                    .edit-button {
+                        background: none;
+                        border: none;
+                        cursor: pointer;
+                        padding: 5px;
+                        color: #666;
+                        transition: color 0.3s;
+
+                        &:hover {
+                            color: #2196F3;
+                        }
+
+                        i {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .edit-button {
+                        &:hover {
+                            color: #4CAF50;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

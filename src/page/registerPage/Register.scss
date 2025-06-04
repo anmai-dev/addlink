@@ -1,0 +1,109 @@
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #f0f4f8, #d9e2ec, #bcccdc);
+    padding: 20px;
+
+    .notification {
+        background: #e3f2fd;
+        color: #0d47a1;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 16px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.register-form {
+    background: #ffffff;
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+
+    h2 {
+        margin-bottom: 30px;
+        color: #2c3e50;
+        font-size: 28px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #2c3e50, #4a90e2);
+            border-radius: 2px;
+        }
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+        text-align: left;
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #4a90e2;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 0;
+            background: #f8f9fa;
+            border: 2px solid #d9e2ec;
+            border-radius: 8px;
+            font-size: 15px;
+            color: #2c3e50;
+            transition: all 0.3s ease;
+
+            &:focus {
+                border-color: #4a90e2;
+                background: #fff;
+                outline: none;
+                box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+            }
+        }
+    }
+
+    button {
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(135deg, #4a90e2 0%, #2c3e50 100%);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(74, 144, 226, 0.3);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+}
