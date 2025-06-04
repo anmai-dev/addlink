@@ -45,7 +45,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://hotnight.xyz/api/",
+  "proxy": "https://hotnight.xyz",
   "description": "# Getting Started with Create React App",
   "main": "index.js",
   "keywords": [],
