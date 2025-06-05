@@ -13,8 +13,7 @@ export const createLink = async (dispatch, formData, token) => {
             },
             formData: Object.fromEntries(formData)
         });
-
-        const res = await axios.post('/api', formData, {
+        const res = await axios.post('/api/', formData, {
             headers: {
                 'token': `Bearer ${token}`,
                 'Content-Type': 'multipart/form-data'
