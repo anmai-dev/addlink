@@ -23,10 +23,6 @@ const HomePage = () => {
                         <p>(💯Để bắt đầu, vui lòng đăng ký dịch vụ của chúng tôi và khám phá toàn bộ tiềm năng của LinkWrap.)</p>
                         <p>♥️✔️Create your account now and start wrapping your links!</p>
                         <p>(♥️✔️Tạo tài khoản của bạn ngay bây giờ và bắt đầu gói các liên kết của bạn!)</p>
-                        <p>☎contact us at-maivanantdc02@gmail.com or phone number-0839592579</p>
-                        <p>(☎Liên hệ chúng tôi tại maivanantdc02@gmail.com hoặc số điện thoại 0839592579)</p>
-                        {/* <Link to='/signup' className='register-button'>Register Now</Link> */}
-                        <Link to='/contact' className='contact-button'>Contact Us</Link>
                     </>
                 )}
             </div>
