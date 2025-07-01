@@ -18,6 +18,11 @@ const linkSlice = createSlice({
             isLoading: false,
             error: false,
             success: false
+        },
+        deleteLink: {
+            isLoading: false,
+            error: null,
+            success: false
         }
 
     },
@@ -54,6 +59,17 @@ const linkSlice = createSlice({
         getSlugByuserIdFaild: (state) => {
             state.getSlugByuserId.isLoading = false;
             state.getSlugByuserId.error = true
+        },
+        deleteLinkStart: (state) => {
+            state.deleteLink.isLoading = true;
+        },
+        deleteLinkSuccess: (state, action) => {
+            state.deleteLink.isLoading = false;
+            state.deleteLink.success = true;
+        },
+        deleteLinkFaild: (state, action) => {
+            state.deleteLink.error = action.payload;
+            state.deleteLink.isLoading = false;
         }
 
 
@@ -61,6 +77,8 @@ const linkSlice = createSlice({
 });
 
 export const { getAllLinkbySlugStart, getAllLinkbySlugSuccess, getAllLinkbySlugFailure,
-    createLinkStart, createLinkSuccess, createLinkFailure, getSlugByuserIdStart, getSlugByuserIdFaild, getSlugByuserIdSuccess } = linkSlice.actions;
+    createLinkStart, createLinkSuccess, createLinkFailure, getSlugByuserIdStart,
+    getSlugByuserIdFaild, getSlugByuserIdSuccess,
+    deleteLinkStart, deleteLinkSuccess, deleteLinkFaild } = linkSlice.actions;
 export default linkSlice.reducer;
 

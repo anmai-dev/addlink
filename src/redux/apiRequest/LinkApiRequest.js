@@ -1,4 +1,4 @@
-import { createLinkStart, createLinkSuccess, createLinkFailure, getSlugByuserIdStart, getSlugByuserIdSuccess, getSlugByuserIdFaild } from '../Slice/LinkSlice';
+import { createLinkStart, createLinkSuccess, createLinkFailure, getSlugByuserIdStart, getSlugByuserIdSuccess, getSlugByuserIdFaild, deleteLinkStart, deleteLinkSuccess, deleteLinkFaild } from '../Slice/LinkSlice';
 import axios from 'axios';
 
 export const createLink = async (dispatch, formData, token) => {
@@ -56,6 +56,16 @@ export const getSlugByUserId = async (dispatch, token) => {
         });
         dispatch(getSlugByuserIdFaild())
         throw error;
+    }
+};
+export const deleteLink = async (id, dispatch) => {
+    dispatch(deleteLinkStart());
+    try {
+        const res = await axios.delete(`/api/${id}`)
+        dispatch(deleteLinkSuccess(res.data))
+        window.location.reload();
+    } catch (error) {
+        dispatch(deleteLinkFaild(error.response.data.message))
     }
 }
 

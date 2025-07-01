@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
     "@reduxjs/toolkit": "^1.9.7",
     "@testing-library/jest-dom": "5.16.4",
     "@testing-library/react": "13.3.0",
     "@testing-library/user-event": "13.5.0",
     "axios": "^1.9.0",
+    "date-fns": "^4.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-redux": "^8.0.2",
@@ -18,8 +20,7 @@
     "redux-persist": "^6.0.0",
     "redux-thunk": "2.4.1",
     "sass": "^1.88.0",
-    "web-vitals": "2.1.4",
-    "@fortawesome/fontawesome-free": "^6.7.2"
+    "web-vitals": "2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -45,7 +46,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://hotnight.xyz",
+  "proxy": "https://hotchudai1.site",
   "description": "# Getting Started with Create React App",
   "main": "index.js",
   "keywords": [],

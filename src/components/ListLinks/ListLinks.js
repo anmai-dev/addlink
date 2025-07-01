@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import './ListLinks.scss';
-import { getSlugByUserId } from '../../redux/apiRequest/LinkApiRequest';
+import { getSlugByUserId, deleteLink } from '../../redux/apiRequest/LinkApiRequest';
 import { format } from 'date-fns';
 import { vi } from 'date-fns/locale';
 
@@ -39,6 +39,17 @@ const ListLinks = () => {
             setTimeout(() => setCopiedSlug(null), 2000);
         });
     };
+    const handleDeleteLink = async (id) => {
+        try {
+
+            await deleteLink(id, dispatch);
+
+
+        } catch (error) {
+            console.error("Lỗi khi xóa link:", error);
+            alert("Có lỗi xảy ra khi xóa link");
+        }
+    }
 
     return (
         <div className="list-links-container">
@@ -83,8 +94,8 @@ const ListLinks = () => {
                                     <a href={link.destination} target="_blank" rel="noopener noreferrer" className="destination">
                                         <i className="fas fa-external-link-alt"></i>
                                     </a>
-                                    <button className="edit-button">
-                                        <i className="fas fa-edit"></i>
+                                    <button className="delete-button" onClick={() => handleDeleteLink(link._id)}>
+                                        <i className="fas fa-trash-alt"></i>
                                     </button>
                                 </div>
                             </div>
